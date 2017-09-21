@@ -2,9 +2,16 @@
 <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 <div style="display:inline-block;vertical-align:top;">
 <h1>Draw a box around the following: ${objects_to_find}</h1>
-<p>Draw a rectangle using your mouse over each object that matches the search criteria &quot;${objects_to_find}&quot;. If none are found, select the "None found" checkbox instead.</p>
-<div id="bbox_annotator" style="display:inline-block">&nbsp;</div><p/><p/>
-<p id="button_paragraph"><input id="annotation_data" name="annotation_data" type="hidden" /> None Found <input id="none_found" name="none_found" type="checkbox" /> <!--<input id="reset_button" type="reset" />--></p>
+
+<p>Draw a rectangle using your mouse over each object that matches the search criteria &quot;${objects_to_find}&quot;. If none are found, select the &quot;None found&quot; checkbox instead. If you are uncertain whether something is a ${objects_to_find}, please label it.</p>
+
+<div id="bbox_annotator" style="display:inline-block">&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p id="button_paragraph"><input id="annotation_data" name="annotation_data" type="hidden" /> None Found <input id="none_found" name="none_found" type="checkbox" />&nbsp;<!--<input id="reset_button" type="reset" />--></p>
 </div>
 <script type="text/javascript">
 (function() {
