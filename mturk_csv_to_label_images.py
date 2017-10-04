@@ -26,9 +26,9 @@ with open('Batch_2939578_batch_results.csv') as csvfile:
         label_set = json.loads(row[29])
         image_arr = np.zeros(image_size, dtype='uint8')
         for label in label_set:
-            #image_arr[label['left']:(label['left'] + label['width']), label['top']:(label['top'] + label['height'])] = True
             image_arr[label['top']:(label['top'] + label['height']),label['left']:(label['left'] + label['width'])] = 255
-            img = Image.fromarray(image_arr, mode='L').convert('1')
+        img = Image.fromarray(image_arr, mode='L').convert('1')
+        img.save(os.path.join(folder, 'label_' + filename))
 #        if label_set:
 #            print label_set
 #            print filename
@@ -36,4 +36,3 @@ with open('Batch_2939578_batch_results.csv') as csvfile:
 #            implot = plt.imshow(im)
 #            plt.imshow(image_arr, cmap='Greys', alpha=0.3)
 #            plt.show()
-            img.save(os.path.join(folder, 'label_' + filename))
