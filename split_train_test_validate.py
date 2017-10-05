@@ -1,4 +1,5 @@
-import osimport random
+import os
+import random
 
 images = [f for f in os.listdir('.') if f.endswith(".png")]
 random.shuffle(images)
