@@ -26,7 +26,7 @@ with open('Batch_2939578_batch_results.csv') as csvfile:
         label_set = json.loads(row[29])
         image_arr = np.zeros(image_size, dtype='uint8')
         for label in label_set:
-            image_arr[label['top']:(label['top'] + label['height']),label['left']:(label['left'] + label['width'])] = 255
+            image_arr[label['top']:(label['top'] + label['height']),label['left']:(label['left'] + label['width'])] = 1
         img = Image.fromarray(image_arr, mode='L')
         img.save(os.path.join(folder, 'label_' + filename))
 #        if label_set:
